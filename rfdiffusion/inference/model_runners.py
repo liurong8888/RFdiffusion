@@ -740,8 +740,8 @@ class Sampler:
 
         N, L = msa_masked.shape[:2]
 
-        if self.symmetry is not None:
-            idx_pdb, self.chain_idx = self.symmetry.res_idx_procesing(res_idx=idx_pdb)
+        #if self.symmetry is not None:
+            #idx_pdb, self.chain_idx = self.symmetry.res_idx_procesing(res_idx=idx_pdb)
 
         msa_prev = None
         pair_prev = None
@@ -835,8 +835,8 @@ class SelfConditioning(Sampler):
         # No effect if t2d is only dim 44
         t2d[..., :44] = t2d_44
 
-        if self.symmetry is not None:
-            idx_pdb, self.chain_idx = self.symmetry.res_idx_procesing(res_idx=idx_pdb)
+        #if self.symmetry is not None:
+            #idx_pdb, self.chain_idx = self.symmetry.res_idx_procesing(res_idx=idx_pdb)
 
         ####################
         ### Forward Pass ###
